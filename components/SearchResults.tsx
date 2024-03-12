@@ -39,14 +39,14 @@ function SearchResults({ searchText, movies }: SearchResultsProps) {
 
   return (
     <div className="my-3 mx-3">
-  <div className="flex justify-between items-center mb-3">
+  <div className="flex justify-between items-center my-6">
     <h1 className="text-xl font-bold">
       Top Search Results for &quot;{searchText}&quot;
     </h1>
     <div className="w-1/4">
       <select
         onChange={(e) => filterMovies(e.target.value)}
-        className="form-select w-full"
+        className="form-select w-full border-2 border-gray-900"
         aria-label="Default select example"
       >
         <option>Sort By</option>
@@ -56,7 +56,7 @@ function SearchResults({ searchText, movies }: SearchResultsProps) {
       </select>
     </div>
   </div>
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
     {filteredMovies.map((movie) => (
       <MovieCard key={movie.id} movie={movie} />
     ))}

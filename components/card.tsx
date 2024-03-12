@@ -19,16 +19,12 @@ return (
       className="object-cover w-full"
       height={320}
       src={IMAGE_BASE_URL + movie.poster_path} // Use the movie's poster path if available, otherwise use a placeholder
-      style={{
-        aspectRatio: "320/320",
-        objectFit: "cover",
-      }}
       width={320}
     />
     <CardContent className="p-4">
-      <h2 className="text-2xl font-bold hover:text-gray-700 transition-all duration-200">{movie.title}</h2>
+      <h2 className="text-2xl font-bold hover:text-gray-700 transition-all duration-200 line-clamp-1">{movie.title}</h2>
       <h3 className="text-gray-500 hover:text-gray-600 transition-all duration-200">Release Date: {movie.release_date}</h3>
-      <p className="mt-2 text-gray-600 hover:text-gray-700 transition-all duration-200">
+      <p className="mt-2 text-gray-600 hover:text-gray-700 transition-all duration-200 line-clamp-3">
         {movie.overview}
       </p>
     </CardContent>
